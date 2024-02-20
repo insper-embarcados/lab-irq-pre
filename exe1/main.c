@@ -36,7 +36,7 @@ int main() {
 
     if(flag_f_r){
         printf("fall \n");
-        //flag_f_r = 0;
+        flag_f_r = 0;
     }
 
     if(flag_r_r){
