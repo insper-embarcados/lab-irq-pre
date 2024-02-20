@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        test: [exe1, exe2]
+        test: [exe1, exe2, exe3]
     steps:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/pico-build@v0
