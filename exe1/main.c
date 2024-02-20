@@ -5,11 +5,15 @@
 const int BTN_PIN_R = 28; 
 const int LED_PIN_R = 4; 
 
+volatile int flag_f_r = 0 ;
+volatile int flag_r_r = 0 ;
+
+
 void btn_callback(uint gpio, uint32_t events) {
     if (events == 0x4) {         // fall edge
-        printf("fall \n");
+        flag_f_r = 1;
     } else if (events == 0x8) {  // rise edge
-        printf("rise \n");
+        flag_r_r = 1;
     }
 }
 
@@ -29,6 +33,16 @@ int main() {
                                      &btn_callback);
 
   while (true) {
+
+    if(flag_f_r){
+        printf("fall \n");
+        //flag_f_r = 0;
+    }
+
+    if(flag_r_r){
+        printf("rise \n");
+        flag_r_r = 0;
+    }
 
   }
 }
