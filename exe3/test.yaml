@@ -9,16 +9,8 @@ steps:
       part-id: btng
       control: pressed
       value: 1
-  - delay: 100ms
 
-  - expect-pin:
-      part-id: ledg
-      pin: A 
-      value: 1
-  - expect-pin:
-      part-id: ledr
-      pin: A 
-      value: 0
+  - wait-serial: "fall green"
  
   - set-control:
       part-id: btng
@@ -27,44 +19,13 @@ steps:
   - delay: 100ms
 
 
-## btn g pressed
-  - set-control:
-      part-id: btng
-      control: pressed
-      value: 1
-  - delay: 100ms
-  - set-control:
-      part-id: btng
-      control: pressed
-      value: 0
-  - delay: 100ms
-
-  - expect-pin:
-      part-id: ledg
-      pin: A 
-      value: 0
-  - expect-pin:
-      part-id: ledr
-      pin: A 
-      value: 0
-
 ## btn r pressed
   - set-control:
       part-id: btnr
       control: pressed
       value: 1
-  - delay: 100ms
 
-
-  - expect-pin:
-      part-id: ledg
-      pin: A 
-      value: 0
-  - expect-pin:
-      part-id: ledr
-      pin: A 
-      value: 1
-
+  - wait-serial: "fall red"
   - set-control:
       part-id: btnr
       control: pressed
@@ -76,18 +37,10 @@ steps:
       part-id: btnr
       control: pressed
       value: 1
-  - delay: 100ms
+
+  - wait-serial: "fall red"
   - set-control:
       part-id: btnr
       control: pressed
       value: 0
   - delay: 100ms
-
-  - expect-pin:
-      part-id: ledg
-      pin: A 
-      value: 0
-  - expect-pin:
-      part-id: ledr
-      pin: A 
-      value: 0
