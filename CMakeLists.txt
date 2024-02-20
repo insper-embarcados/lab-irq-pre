@@ -29,4 +29,5 @@ endif()
 
 # Hardware-specific examples in subdirectories:
 add_subdirectory(exe1)
+add_subdirectory(exe2)
 
