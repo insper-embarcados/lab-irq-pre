@@ -1,21 +1,20 @@
-name: Blinky test
+name: exe1
+author: Rafael Corsi
 version: 1
-author: Uri Shaked
 
 steps:
-  - wait-serial: 'LED on'
-  - expect-pin:
-      part-id: led1
-      pin: A # Anode pin
+  - delay: 150ms
+  - set-control:
+      part-id: btnr
+      control: pressed
       value: 1
-  - delay: 250ms
-  - wait-serial: 'LED off'
-  - expect-pin:
-      part-id: led1
-      pin: A # Anode pin
+  - wait-serial: "fall"
+  - delay: 300ms
+
+
+  - set-control:
+      part-id: btnr
+      control: pressed
       value: 0
-  - wait-serial: 'LED on'
-  - expect-pin:
-      part-id: led1
-      pin: A # Anode pin
-      value: 1
+  - wait-serial: "rise"
+  - delay: 300ms
