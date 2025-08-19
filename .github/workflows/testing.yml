@@ -11,9 +11,9 @@ jobs:
       matrix:
         test: [exe5]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
-      - uses: insper-embarcados/actions-wokwi-test@v1
+      - uses: insper-embarcados/actions-wokwi-test@v3
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: ${{ matrix.test }}
@@ -21,9 +21,6 @@ jobs:
         with:
           c_file: ${{ matrix.test }}/main.c
           rubric_file: ${{ matrix.test }}/rubric_firmware.yml
-      - uses: insper-embarcados/actions-embedded-check@v1
-        with:
-          c_file: ${{ matrix.test }}/main.c
       - uses: insper-embarcados/actions-embedded-check@v1
         with:
           c_file: ${{ matrix.test }}/main.c
