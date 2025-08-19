@@ -29,7 +29,7 @@ int main() {
 
     while (true) {
         if (g_event_flag) {
-            sleep_ms(1000);
+            sleep_ms(800);
             if (g_event_flag == 0)
                 printf("Aperto curto!\n");
             else
