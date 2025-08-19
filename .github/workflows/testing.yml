@@ -13,10 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/pico-build@v0
-      - uses: insper-embarcados/actions-wokwi-test@v3
+      - uses: insper-embarcados/actions-wokwi-test@v0
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          timeout: 10000
           test_name: ${{ matrix.test }}
       - uses: insper-embarcados/actions-firmware-rubric-check@v0
         with:
