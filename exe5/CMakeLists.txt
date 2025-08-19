@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 # environment, CMake cache etc) set(PICO_SDK_PATH
 # "/home/mathew/src/pico/pico-sdk")
 
-project(Exe4 C CXX ASM)
+project(exe5 C CXX ASM)
 
 set(PICO_CXX_ENABLE_EXCEPTIONS 1)
 
