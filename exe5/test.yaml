@@ -10,19 +10,3 @@ steps:
           control: pressed
           value: 1
     - delay: 100ms 
-    - set-control:
-          part-id: btnr
-          control: pressed
-          value: 0
-    - wait-serial: "Aperto curto!"
-
-    - set-control:
-          part-id: btnr
-          control: pressed
-          value: 1
-    - delay: 800ms
-    - set-control:
-          part-id: btnr
-          control: pressed
-          value: 0
-    - wait-serial: "Aperto longo!"
