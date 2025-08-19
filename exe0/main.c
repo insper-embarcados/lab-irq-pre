@@ -15,7 +15,7 @@ void btn_callback(uint gpio, uint32_t events) {
 
     printf("btn pressed \n");
 
-    while (!pio_get(BTN_PIN_R)) {
+    while (!gpio_get(BTN_PIN_R)) {
       sleep_ms(1);
     }
 

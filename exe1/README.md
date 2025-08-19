@@ -12,4 +12,7 @@ Modifique o código adicionando uma flag e realize o `printf` na função `main`
 
 Não sabe o que tem que fazer? Leia a teoria em `RP2040/GPIO IRQ` especificamente a parte do *IRQ - Keep it short and simple*, se não ajudar tente [esta explicação link](https://www.techtarget.com/whatis/definition/IRQ-interrupt-request)
     
-    
+> [!WARNING]
+> Nesse exercício você não pode fazer uso da func. `gpio_get`, deve conseguir resolver apenas com o uso de interrupção.
+>
+> Verificamos isso automaticamente no seu repositório do github!

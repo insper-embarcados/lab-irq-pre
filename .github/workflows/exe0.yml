@@ -1,4 +1,4 @@
-name: exe0
+name: Build, test, check!!
 
 on:
   push:

@@ -11,3 +11,8 @@ Configure os botões com IRQs:
 - Botão verde: Borda de subida (quando for solto)
 
 Toda vez que o botão vermelho for pressionado, inverta o estado do LED vermelho e toda vez que o botão verde for solto, inverta o estado do LED verde.
+
+> [!WARNING]
+> Nesse exercício você não pode fazer uso da func. `gpio_get`, deve conseguir resolver apenas com o uso de interrupção.
+>
+> Verificamos isso automaticamente no seu repositório do github!
