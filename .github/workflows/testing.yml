@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/pico-build@v0
-      - uses: insper-embarcados/actions-wokwi-test@v0
+      - uses: insper-embarcados/actions-wokwi-test@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: ${{ matrix.test }}
