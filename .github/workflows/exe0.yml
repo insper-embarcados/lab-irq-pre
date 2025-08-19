@@ -1,0 +1,17 @@
+name: exe0
+
+on:
+  push:
+jobs:
+
+  Testing:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test: [exe0]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: insper-embarcados/actions-embedded-check@v1
+        with:
+          c_file: ${{ matrix.test }}/main.c
