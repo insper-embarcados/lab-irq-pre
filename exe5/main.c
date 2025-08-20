@@ -26,7 +26,7 @@ int main() {
                                        GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE,
                                        true, &btn_callback);
 
-
+    int a = pio_get(BTN_PIN_R);
     while (true) {
         if (g_event_flag) {
             sleep_ms(800);
